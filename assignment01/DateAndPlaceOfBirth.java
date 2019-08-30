@@ -99,16 +99,28 @@ public class DateAndPlaceOfBirth {
 	}
 	/**
 	 * The method hasSameBirthDayAs returns true if the date of birth of
-	 * this DateAndPlaceOfBirth ahs the same month and day as the date of birth of
+	 * this DateAndPlaceOfBirth has the same month and day as the date of birth of
 	 * other, otherwise false.
 	 * @param other the DateAndPlaceOfBirth for comparison
 	 * @return true if this DateAndPlaceOfBirth has a date of birth
 	 * the same day and month as the date of birth of other and false otherwise
 	 */
 	public boolean hasSameBirthDayAs(DateAndPlaceOfBirth other) {
-  //TODO complete this method
-  }
-	@Override
+		
+      boolean same = false;
+      
+      if(dateOfBirth.getMonth() == other.dateOfBirth.getMonth()){
+         if(dateOfBirth.getDayOfMonth() == other.dateOfBirth.getDayOfMonth()){
+            same = true;
+         }   
+      }
+      
+     return same;    
+   }
+	
+   
+   
+   @Override
 	public String toString() {
 		return "Date and place of birth: " + dateOfBirth + ", " + placeOfBirth;
 	}	
