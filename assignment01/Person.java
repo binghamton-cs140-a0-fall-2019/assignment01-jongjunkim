@@ -75,7 +75,7 @@ public class Person {
 // Binghamton, NY 13905
    public String toString(){
       return String.format(firstNames + lastNames + "(" + ssn + ")" + ","
-                           + "Date and place of birth" + placeDob + address);
+                           + "Date and place of birth" + placeDob + "," +  address);
    }
 }
 
