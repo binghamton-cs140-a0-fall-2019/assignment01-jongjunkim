@@ -7,10 +7,10 @@ public class SimpleDateTester{
    SimpleDate sd = new SimpleDate();
    SimpleDate sd1 = new SimpleDate();
    
-   sd.of(1996,1,30);
+   sd.of(1999,7,30);
    sd1.of(1997,6,10);
    
-   System.out.println(sd.before(sd1));
+  System.out.println(sd1.before(sd));
    
    }
 }

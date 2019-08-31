@@ -1,4 +1,5 @@
 package assignment01;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class SimpleDate{
@@ -19,15 +20,30 @@ public class SimpleDate{
    }
    
    public boolean before(SimpleDate other){
-
-      
-      if(this.before(other)){
-         return true;
+   
+      boolean isBefore = true;
+   
+      if(this.year < other.year){
+        isBefore =  true;
+        if(this.month < other.month){
+            isBefore =  true;
+            if(this.day < other.day){
+               isBefore = true;
+             }else{
+               isBefore = false;
+            }   
+         }else{
+            isBefore = false;
+         }
       }else{
-         return false;
+         isBefore = false;
       }   
+       
+     return isBefore; 
+            
+              
    
-   
-   
-   }
+     
+                
+    }
 }
